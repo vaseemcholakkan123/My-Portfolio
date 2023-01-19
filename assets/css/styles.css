@@ -2599,6 +2599,14 @@ padding: 5px 10px;
   margin-left: -3px;
   transform: translateY(-15px);
 }
+@media (max-width:905px){
+	.vl{
+	    display:none;	
+	}
+}
+h2{
+	padding-top:15px;
+}
 
 .llenar {
   background: var(--nav-color);
