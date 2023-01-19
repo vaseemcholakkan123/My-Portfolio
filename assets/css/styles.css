@@ -2619,7 +2619,7 @@ padding: 5px 10px;
 
 
 input{
-  width: 22%;
+  width: 38vw;
   height: 36px;
   border: none;
   border-radius: 8px;
@@ -2629,6 +2629,7 @@ input{
   background-color: #3b3b3b;
 }
 form textarea{
+  width:80vw;
   border: none;
   border-radius: 8px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
