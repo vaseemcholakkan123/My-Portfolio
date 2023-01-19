@@ -2619,12 +2619,22 @@ padding: 5px 10px;
 
 
 input{
-  margin-left: 10px;
-  border:1px solid var(--third-color);
-  border-radius: 3px;
+  width: 22%;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   padding: .3rem;
   font-size: medium;
-
+  background-color: #3b3b3b;
+}
+form textarea{
+  border: none;
+  border-radius: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: .3rem;
+  font-size: medium;
+  background-color: #3b3b3b;
 }
 form div{
   margin-bottom: .5rem;
@@ -2632,15 +2642,15 @@ form div{
 }
 form button{
   width: 100%;
-  background-color: white;
-  color: rgb(63, 155, 63);
+  background-color: inherit;
+  color: var(--third-color);
   font-weight: 700;
   cursor: pointer;
-  border: 1px solid var(--third-color);
+  border: 1px solid var(--first-color);
   border-radius: 4px;
   padding: 8px 5px;
 }
 form button:hover{
-  background-color: rgb(63, 155, 63);
+  background-color: var(--first-color);
   color: white;
 }
