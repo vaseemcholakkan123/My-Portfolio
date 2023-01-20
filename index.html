@@ -581,23 +581,23 @@
                     <h2 style="margin-bottom: 5px;" class="section-title-center send__title1">Contact Now</h2>
                     <form action="submit" id="submit-form">
                         <div >
-                            <label for="name" class="form-label">Name</label><br>
+                            <label id="namelabel" for="name" class="form-label">Name</label><br>
                             <input type="text" required name="name" class="form-control" id="name"
                                 placeholder="your name"><br>
                         </div>
 
                         <div>
-                            <label for="mobile" class="form-label">Mobile</label><br>
+                            <label id="moblabel" for="mobile" class="form-label">Mobile</label><br>
                             <input type="number" required name="mobile" class="form-control" id="mobile"
                                 placeholder="9388798989"><br>
                         </div>
                         <div>
-                            <label for="Email" class="form-label">Email address</label><br>
+                            <label id="emaillabel" for="Email" class="form-label">Email address</label><br>
                             <input  type="email" required name="email" class="form-control" id="Email"
                                 placeholder="name@example.com"><br>
                         </div>
                         <div>
-                            <label for="Message" class="form-label">Enter message</label><br>
+                            <label id="msglabel" for="Message" class="form-label">Enter message</label><br>
                             <textarea name="message" required placeholder="your message here..."  style="width: 70%;" class="form-control" id="message" rows="3"></textarea><br>
                         </div>
                             <button type="submit">Submit</button>
@@ -672,23 +672,69 @@
         </div>
 
         <script>
-            $("#submit-form").submit((e)=>{
-                e.preventDefault()
-                $.ajax({
-                    url:"https://script.google.com/macros/s/AKfycby1Lt-dVRAprzIN41jXIlKRjkgCDNNllOxUW5rw-nphUHFtkh3kDLns5wnJ4LXFWQz3Tw/exec",
-                    data:$("#submit-form").serialize(),
-                    method:"post",
-                    success:function (response){
-                        alert("Form submitted successfully")
-                        window.location.reload()
-                        //window.location.href="https://google.com"
-                    },
-                    error:function (err){
-                        alert("Something Error")
-        
-                    }
+           function validateform() {
+                let nameinput = document.getElementById('name').value
+                let mobinput = document.getElementById('mobile').value
+                let emailinput = document.getElementById('Email').value
+                let msginput = document.getElementById('message').value
+
+                let namelabel = document.getElementById('namelabel')
+                let moblabel = document.getElementById('moblabel')
+                let emaillabel = document.getElementById('emaillabel')
+                let msglabel = document.getElementById('msglabel')
+                let validated = false
+
+                if (nameinput == "") {
+                    namelabel.innerText = '  ⓘ pls enter here'
+                    validated = false
+                }
+                else if (mobinput == "") {
+                    moblabel.innerText = '  ⓘ pls enter here'
+                    validated = false
+                }
+
+                else if (mobinput.length < 10 || mobinput.length > 10) {
+                    console.log(mobinput.length);
+                    moblabel.innerText = 'Enter a valid mobile number'
+                    validated = false
+                
+                }
+
+                else if (emailinput == "") {
+                    if(mobinput.length == 10) moblabel.innerText = 'valid'
+                    emaillabel.innerText = '  ⓘ pls enter here'
+                    validated = false
+                }
+                else if (msginput == "") {
+                    msglabel.innerText = '  ⓘ pls enter here'
+                    validated = false
+                } else validated = true
+
+                
+                
+                $("#submit-form").submit((e) => {
+                    validateform()
+                    e.preventDefault()
+                    if(validated){
+                    $.ajax({
+                        url: "https://script.google.com/macros/s/AKfycby1Lt-dVRAprzIN41jXIlKRjkgCDNNllOxUW5rw-nphUHFtkh3kDLns5wnJ4LXFWQz3Tw/exec",
+                        data: $("#submit-form").serialize(),
+                        method: "post",
+                        success: function (response) {
+                            alert("Form submitted successfully")
+                            window.location.reload()
+                            //window.location.href="https://google.com"
+                        },
+                        error: function (err) {
+                            alert("Something Error")
+    
+                        }
+                    })
+                }
                 })
-            })
+                
+
+            }
         </script>
 </body>
 
