@@ -1,741 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vaseem Cholakkan — Backend & Full Stack Developer. Building scalable SaaS platforms, Shopify-integrated apps, and AI-powered systems." />
+  <title>Vaseem Cholakkan — Backend & Full Stack Developer</title>
 
-    <!-- ===== TITTLE ===== -->
-    <title>Vaseem Cholakkan</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <!-- ===== META ===== -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
-    <meta name="description" content="vaseem's portfolio" />
-
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- ===== FAVICON ===== -->
-    <link rel="icon" href="assets/img/favicon.png" type="image/png" />
-
-    <!-- ===== BOX ICONS ===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <!-- ===== FONT AWESOME ===== -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
-
-        <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuTy/PRiuHtD81KjN3dIkYBdFp+jBbMiiiPrQmK1GmfFibrGRRbRBmM8JxfJt2V7dpxgIJGPJm4cvsag=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <div class="custom-cursor" id="js-cursor">
-        <div class="cursor__small abs-center" id="js-cursor__small"></div>
-        <div class="cursor__big abs-center" id="js-cursor__big"></div>
-        <div class="cursor__big2 abs-center" id="js-cursor__big2"></div>
-    </div>
 
+  <!-- ═══════════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════════ -->
+  <header class="l-header" id="header">
+    <nav class="nav container">
 
-    <!-- ===== HEADER ===== -->
-    <header class="l-header">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-vc">VC</span><span class="nav__logo-dot">.</span>
+      </a>
 
-        <!-- ===== NAV BAR ===== -->
-        <nav class="nav bd-grid">
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about"      class="nav__link">About</a></li>
+        <li><a href="#skills"     class="nav__link">Skills</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#projects"   class="nav__link">Projects</a></li>
+        <li><a href="#contact"    class="nav__link">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-btn" title="Toggle theme">
+            <i class="bx bxs-moon" id="theme-icon"></i>
+          </button>
+        </li>
+      </ul>
 
-            <div>
-                <a href="#" class="nav__logo curserhover">
-                    <img class="nav__img" id="navlogo">
-                    <p>VASEEM CHOLAKKAN</p>
-                </a>
-            </div>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-btn-mobile" title="Toggle theme">
+          <i class="bx bxs-moon" id="theme-icon-mobile"></i>
+        </button>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
 
-            <!-- ===== NAV MENU ===== -->
-            <div class="nav__menu" id="nav-menu">
+    </nav>
+  </header>
 
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active curserhover"></a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link curserhover">About</a></li>
+  <main>
 
+    <!-- ═══════════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════════ -->
+    <section id="home">
 
-                    <li class="nav__item"><a href="#skills" class="nav__link curserhover">Skills</a></li>
+      <!-- Left column -->
+      <div class="hero__left">
+        <div class="hero__badge" data-animate>
+          <span class="hero__badge-dot"></span>
+          Open to opportunities
+        </div>
 
-                    <li class="nav__item"><a href="#experiencia" class="nav__link curserhover">Education</a></li>
-                    <li class="nav__item"><a href="#portfolio" class="nav__link curserhover">Portfolio</a></li>
-                    <li class="nav__item"><a href="#vision" class="nav__link curserhover">Vision</a></li>
-                    <li class="nav__item"><a href="#contacto" class="nav__link curserhover">Contact</a></li>
+        <h1 class="hero__name" data-animate data-delay="1">
+          Vaseem<br>Cholakkan.
+        </h1>
+        <div class="hero__name-line" data-animate data-delay="2"></div>
 
-                    <!--<li class="nav__item"><p class="lang curserhover" id="language-button"><b>EN</b></p></li>-->
-                    <li class="nav__item"><i class='bx bxs-moon change-theme curserhover' id="theme-button"></i></li>
-                </ul>
+        <p class="hero__role" data-animate data-delay="2">Backend &amp; Full Stack Developer</p>
 
-            </div>
+        <p class="hero__tagline" data-animate data-delay="3">
+          Building scalable SaaS platforms, Shopify-integrated apps, and AI-powered systems. 2.5+ years shipping production code.
+        </p>
 
-            <!-- ===== NAV MENU MOBILE ICON ===== -->
-            <div class="nav__toggle curserhover" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
+        <div class="hero__ctas" data-animate data-delay="3">
+          <a href="#projects" class="btn btn--primary">View My Work &rarr;</a>
+          <a href="#contact"  class="btn btn--outline">Get In Touch</a>
+        </div>
 
-        </nav>
+        <div class="hero__social" data-animate data-delay="4">
+          <a href="https://github.com/vaseemcholakkan123" target="_blank"
+             class="hero__social-link">↗ GitHub: vaseemcholakkan123</a>
+          <a href="https://www.linkedin.com/in/mohammed-vaseem-cholakkan-a00a00248"
+             target="_blank" class="hero__social-link">↗ LinkedIn: mohammed-vaseem</a>
+        </div>
+      </div>
 
-    </header>
-
-    <main class="l-main">
-
-        <!-- ===== BACKGROUND STARS ===== -->
+      <!-- Right column: stats -->
+      <div class="hero__stats" data-animate data-delay="2">
         <div>
-            <div id='stars'></div>
-            <div id='stars2'></div>
-            <div id='stars3'></div>
-            <div id='stars4'></div>
+          <div class="hero__stat-num">2.5+</div>
+          <div class="hero__stat-label">Years of professional<br>experience</div>
         </div>
+        <div>
+          <div class="hero__stat-num">7+</div>
+          <div class="hero__stat-label">Production systems<br>shipped</div>
+        </div>
+        <div>
+          <div class="hero__stat-num">80%</div>
+          <div class="hero__stat-label">Manual effort reduced<br>via AI automation</div>
+        </div>
+        <div>
+          <div class="hero__stat-num">60%</div>
+          <div class="hero__stat-label">API response time<br>improved via caching</div>
+        </div>
+      </div>
 
-        <!-- ===== BACK TO TOP BUTTON ===== -->
-        <button id="back-to-top-btn" class="curserhover"><i class="fas fa-angle-double-up"></i></button>
+    </section>
 
-        <!-- ===== HOME ===== -->
-        <section class="home bd-grid" id="home">
+    <div class="divider"></div>
 
-            <!-- ===== TITTLE & CONTACT BUTTON ===== -->
-            <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Vaseem Cholakkan.</span><br><span
-                        class="ityped"></span><span class="ityped"></span></h1>
-                <a href="#contacto" class="button curserhover2"><i class="far fa-comments"></i> | Contact.</a>
+    <!-- ═══════════════════════════════════════════════
+         ABOUT
+    ════════════════════════════════════════════════ -->
+    <section class="section section--alt" id="about">
+      <div class="container">
+        <span class="section__label" data-animate>// about</span>
+        <h2 class="section__title" data-animate data-delay="1">About Me</h2>
+
+        <div class="about__grid">
+          <div data-animate data-delay="1">
+            <div class="about__bio">
+              <p>Hi, I'm Vaseem — a Backend &amp; Full Stack Developer based in India with 2.5+ years
+              of professional experience. At <strong style="color:var(--text)">Valar Digital</strong> I build
+              Shopify-integrated SaaS applications, enterprise management platforms, and AI-powered
+              automation systems.</p>
+              <p>I specialize in backend architecture, API design, event-driven systems, and integrating
+              complex third-party services into production-ready applications. From RAG pipelines with
+              GPT-4 to subscription billing engines — I work across the full stack.</p>
             </div>
-
-            <!-- ===== SOCIAL ICONS ===== -->
-            <!-- ===== SOCIAL ICONS ===== -->
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/mohammed-vaseem-cholakkan-a00a00248" target="_blank"
-                    class="home__social-icon curserhover"><i class='fab fa-linkedin-in'></i></a>
-                <a href="https://www.instagram.com/vaseem_cholakkan" target="_blank"
-                    class="home__social-icon curserhover"><i class='fab fa-instagram' style="font-weight:600;"></i></a>
-                <a href="https://github.com/vaseemcholakkan123" target="_blank" class="home__social-icon curserhover"><i
-                        class='fab fa-github'></i></a>
-
+            <div class="about__tags" style="margin-top:28px">
+              <span class="chip chip--accent">Backend Architecture</span>
+              <span class="chip chip--purple">Shopify Ecosystem</span>
+              <span class="chip chip--green">AI / ML Pipelines</span>
+              <span class="chip chip--accent">API Design</span>
+              <span class="chip chip--orange">Payment Systems</span>
             </div>
-            <!-- ===== LOGO ===== -->
-            <div class="home__img" id="logo">
-                <!-- <img src="assets/img/dark_logo.png" alt="Logo bilal-afrad"> -->
+          </div>
+
+          <div class="about__stats" data-animate data-delay="2">
+            <div class="about__stat-card">
+              <div class="about__stat-card-num">2.5+</div>
+              <div class="about__stat-card-label">Years of professional<br>experience</div>
             </div>
-
-
-        </section>
-
-        <!--========== ABOUT ==========-->
-        <section class="send section" id="about">
-
-            <div class="send__container">
-                <div class="bd-container bd-grid">
-                    <div class="send__content">
-                        <h2 class="section-title-center send__title">About me</h2>
-                        <p class="send__description">Hi , I am vaseem and I live in the city vengara in malappuram and I
-                            am a Web Designer and Web developer. I have completed my 2-years of degree at Malabar
-                            college of Advanced Studies Vengara.Iam currenly learning python/Django for my future
-                            career.</p>
-                    </div>
-
-                    <div class="send__img">
-                        <table class="infome">
-                            <tr>
-                                <td class="me"><i class="fas fa-user"></i></td>
-                                <td class="me">
-                                    <p>19 years</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="me"><i class="fas fa-volume-up"></i></td>
-                                <td class="me">
-                                    <p>English , Malayalam</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="me"><i class="fas fa-map-marker-alt"></i></td>
-                                <td class="me">
-                                    <p>India</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
+            <div class="about__stat-card">
+              <div class="about__stat-card-num">7+</div>
+              <div class="about__stat-card-label">Production systems<br>shipped to market</div>
             </div>
-
-
-        </section>
-
-        <div class="vl"></div>
-
-        <!--========== QUALIFICATION ==========-->
-        <section class="qualification section send" id="experiencia">
-            <div class="send__container">
-                <h2 class=" section-title-center send__title1 exp">Experience</h2>
-                <p class="section__subtitle span1 exp">My path as a Developer.</p>
-
-                <div class="qualification__container container">
-                    <!---->
-                    <div class="qualification__tabs">
-                        <div class="qualification__button button--flex qualification__active curserhover"
-                            data-target='#education'>
-                            <i class="fas fa-graduation-cap qualification__icon"></i>
-                            Education
-                        </div>
-                        <div class="qualification__button button--flex curserhover" id="portfolio"
-                            data-target='#experience'>
-                            <i class="fas fa-laptop qualification__icon"></i>
-                            Portfolio
-                        </div>
-                    </div>
-
-                    <div class="qualification__sections">
-
-
-                        <div class="qualification__content experience__active" data-content id="experience">
-                            <!-- data 2-->
-                            <div class="qualification__data">
-                                <div class="right">
-                                    <h3 class="qualification__title">MOD DROID</h3>
-                                    <span class="qualification__subtitle sub">Basic website with mongodb,node &
-                                        express.</span><br>
-                                    <span class="qualification__subtitle"><a target="_blank" class="projectlink"
-                                            href="https://moddroid.tk">Visit Site</a></span><br>
-                                    <span class="qualification__subtitle git"><a target="_blank" class="projectlink"
-                                            href="https://github.com/vaseemcholakkan123/Mod-Doid.git">Mod Droid
-                                            (git-code)</a></span>
-
-                                </div>
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                            <div class="qualification__data">
-                                <div></div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div class="left">
-                                    <h3 class="qualification__title">Tic Tac Toe</h3>
-                                    <span class="qualification__subtitle sub">Tic Tac Toe game with html ,javascript &
-                                        css.</span><br>
-                                    <span class="qualification__subtitle"><a target="_blank" class="projectlink"
-                                            href="https://tictactoeby-vaseem-vaseemcholakkan123.vercel.app/">Visit
-                                            Site</a></span><br>
-                                    <span class="qualification__subtitle git"><a target="_blank" class="projectlink"
-                                            href="https://github.com/vaseemcholakkan123/tictactoebyVASEEM.git">Tic Tac Toe
-                                            (git-code)</a></span>
-                                </div>
-
-                            </div>
-
-                            <div class="qualification__data">
-                                <div class="right">
-                                    <h3 class="qualification__title">Spacex</h3>
-                                    <span class="qualification__subtitle sub">Spacex dummy homepage with html &
-                                        css.</span><br>
-                                    <span class="qualification__subtitle"><a target="_blank" class="projectlink"
-                                            href="https://vaseemcholakkan123.github.io/spacex/">Visit Site</a></span>
-                                </div>
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                            <div class="qualification__data">
-                                <div></div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div class="left">
-                                    <h3 class="qualification__title">StarBucks</h3>
-                                    <span class="qualification__subtitle sub">Starbucks homepage with html &
-                                        css.</span><br>
-                                    <span class="qualification__subtitle"><a target="_blank" class="projectlink"
-                                            href="https://vaseemcholakkan123.github.io/starbucks/">Visit site</a></span>
-                                </div>
-
-                            </div>
-                            
-                            
-                            
-                            <div class="qualification__data">
-                                <div class="right">
-                                    <h3 class="qualification__title">Rockstar Games</h3>
-                                    <span class="qualification__subtitle sub">Responsive Website with Html,Css,Javascript and Bootstrap.</span><br>
-                                    <span class="qualification__subtitle"><a target="_blank" class="projectlink"
-                                            href="https://vaseemcholakkan123.github.io/Rockstar-Gsmes/">Visit Site</a></span><br>
-                                    <span class="qualification__subtitle git"><a target="_blank" class="projectlink"
-                                            href="https://github.com/vaseemcholakkan123/Rockstar-Gsmes.git">Rockstar Games
-                                            (git-code)</a></span>
-
-                                </div>
-                                    <div>
-                                        <span class="qualification__rounder"></span>
-                                        <span class="qualification__line"></span>
-                                    </div>
-                            </div>
-                            
-                             
-                            
-                        </div>
-
-                        <!-- Content 1-->
-                        <div class="qualification__content qualification__active" data-content id="education">
-                            <!-- data 1-->
-                            <div class="qualification__data">
-                                <div class="right">
-                                    <h3 class="qualification__title">Degree Bsc Electronics</h3>
-                                    <span class="qualification__subtitle">Malabar College of Advanced Studies</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2020 - 2022
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                            <!-- data 2-->
-                            <div class="qualification__data">
-                                <div></div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div class="left">
-                                    <h3 class="qualification__title">Student</h3>
-                                    <span class="qualification__subtitle">Brototype Academy</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2022 Dec- Present
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- data 3-->
-                            <div class="qualification__data">
-                                <div class="right">
-                                    <h3 class="qualification__title">Higher Secondary Education</h3>
-                                    <span class="qualification__subtitle">G.V.H.S.S Vengara, Malappuram</span>
-                                    <div class="qualification__calendar">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2018 - 2020
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                            <!-- data 4-->
-                            <!--  <div class="qualification__data">
-                                            <div></div>
-
-                                            <div>
-                                                <span class="qualification__rounder"></span>
-                                            
-                                            </div>
-
-                                            <div class="left">
-                                                <h3 class="qualification__title">Business Development Trainee</h3>
-                                                <span class="qualification__subtitle">BYJU'S Think & Learn Pvt.Ltd</span>
-                                                <div class="qualification__calendar">
-                                                    <i class="uil uil-calendar-alt"></i>
-                                                    2022 july - 2022 Sept
-                                                </div>
-                                            </div>
-                                        </div> -->
-
-                        </div>
-
-
-
-
-                    </div>
-                </div>
-
-
-
-                <!-- ===== Linkedin BUTTON ===== -->
-                <a href="https://www.linkedin.com/in/mohammed-vaseem-cholakkan-a00a00248/" target="_blank"
-                    class="buttoncv curserhover2"><i class="fab fa-linkedin-in"></i> | More Info</a>
-
+            <div class="about__stat-card">
+              <div class="about__stat-card-num">80%</div>
+              <div class="about__stat-card-label">Reduction in manual<br>report writing (R180 AI)</div>
             </div>
-
-            <div class="vl"></div>
-
-
-        </section>
-        <!--vision -->
-
-        <section class="qualification section send vision" id="vision" id="experiencia">
-            <div class="send__container" style="margin-top: 0;">
-                <h2 class=" section-title-center send__title1 exp">Vision</h2>
-                <p class="section__subtitle span1 exp">My vision for the future</p>
-
-                <div class="qualification__container container">
-                    <!---->
-                    <div class="qualification__tabs">
-                        <div class="qualification__button button--flex qualification__active curserhover"
-                            data-target='#self'>
-                            See Vision
-                        </div>
-                    </div>
-
-                    <div class="qualification__sections">
-
-                        <!-- Content 2-->
-                        <div class="qualification__content qualification__active" data-content id="self">
-                            <!-- data 1-->
-                            <div class="qualification__data">
-                                <div class="right">
-                                    <h3 class="qualification__title">Be an Enterprenuer</h3>
-                                    <span class="qualification__subtitle">Be an enterprenuer in 2026</span>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-                            <div class="qualification__data">
-                                <div></div>
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                                <div class="left">
-                                    <h3 class="qualification__title">Better Lifestyle</h3>
-                                    <span class="qualification__subtitle">Achieve a better lifestyle with a good career
-                                        and by maintaining a healthy diet</span>
-                                </div>
-
-
-                            </div>
-
-                            <div class="qualification__data">
-                                <div class="right">
-                                    <h3 class="qualification__title">Go for a world Tour</h3>
-                                    <span class="qualification__subtitle">In 2026 Go for my Dream trip for 6
-                                        months</span>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-                            <div class="qualification__data">
-                                <div></div>
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                                <div class="left">
-                                    <h3 class="qualification__title">Learn artificial intelligence</h3>
-                                    <span class="qualification__subtitle">in 2024 learn AI and work in my dream company
-                                        google</span>
-                                </div>
-
-
-                            </div>
-
-                            <div class="qualification__data">
-                                <div class="right">
-                                    <h3 class="qualification__title">Contribute for open-source projects</h3>
-                                    <span class="qualification__subtitle">After 6-months contribute to open-source
-                                        projects</span>
-
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                            </div>
-
-                            <div class="qualification__data">
-                                <div></div>
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-                                <div class="left">
-                                    <h3 class="qualification__title">Be a Web Developer</h3>
-                                    <span class="qualification__subtitle">In 2023 i'll be a very good
-                                        web-developer</span>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
-                </div>
+            <div class="about__stat-card">
+              <div class="about__stat-card-num">60%</div>
+              <div class="about__stat-card-label">API response time<br>improved via caching</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="vl"></div>
+    <div class="divider"></div>
 
+    <!-- ═══════════════════════════════════════════════
+         SKILLS
+    ════════════════════════════════════════════════ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <span class="section__label" data-animate>// skills</span>
+        <h2 class="section__title" data-animate data-delay="1">Tech Stack</h2>
+        <p class="section__sub" data-animate data-delay="2">The tools and technologies I work with every day.</p>
 
-        </section>
+        <div class="skills__grid">
 
-        <!--vision -->
-
-
-        <!-- ===== SKILLS ===== -->
-        <section class="work section1" id="skills">
-            <div style="margin-top: 2rem; height: 100px; overflow: hidden;background-color: var(--nav-color);"><svg
-                    viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                        style="stroke: none; fill: var(--wave-color);"></path>
-                </svg></div>
-            <div class="wave send__container3">
-
-                <h2 class="section-title2 section-title-center send__title1">Skills</h2>
-                <p class="section__subtitle span2 exp">Let's talk Technology.</p>
-
-                <!-- ===== SKILLS SLIDER ===== -->
-                <div class="sliderlogo">
-                    <div class="customer-logos">
-                        <div class="slide"><img src="assets/img/html.png" alt="HTML5">
-                            <p>HTML5</p>
-                        </div>
-
-                        <div class="slide"><img src="assets/img/css.png" alt="CSS3">
-                            <p>CSS3</p>
-                        </div>
-                        <div class="slide"><img src="assets/img/js.png" alt="JavaScript">
-                            <p>JavaScript</p>
-                        </div>
-                        <!-- <div class="slide" ><img src="assets/img/react.png" alt="React"><p>React</p></div> -->
-                        <!-- <div class="slide" ><img src="assets/img/node.png" alt="Node.js & Express.js"><p>Node.js & Express.js</p></div> -->
-                        <div class="slide"><img src="assets/img/bootstrap.png" alt="Bootstrap">
-                            <p>Bootstrap</p>
-                        </div>
-                        <!-- <div class="slide" ><img src="assets/img/jquery.png" alt="jQuery"><p>jQuery</p></div> -->
-                        <!--<div class="slide" ><img src="assets/img/npm.png" alt="npm"><p>npm</p></div>-->
-                        <!--<div class="slide" ><img src="assets/img/git.png" alt="Git & GitHub"><p>Git & GitHub</p></div> -->
-                        <!-- <div class="slide" ><img src="assets/img/terminal.png" alt="terminal"><p>Terminal</p></div> -->
-                        <div class="slide"><img src="assets/img/py.png" alt="Python">
-                            <p>Python</p>
-                        </div>
-                    </div>
-                </div>
-
+          <div class="skill-card" data-animate data-delay="1" style="--card-accent:var(--accent)">
+            <div class="skill-card__bar" style="background:var(--accent)"></div>
+            <div class="skill-card__name">Languages</div>
+            <div class="skill-card__chips">
+              <span class="chip chip--accent">TypeScript</span>
+              <span class="chip chip--accent">JavaScript</span>
+              <span class="chip chip--accent">Python</span>
             </div>
+          </div>
 
-        </section>
-
-
-
-
-
-        <!--========== CONTACT==========-->
-        <section class="send1 section1 contact " id="contact">
-            <svg viewBox="0 0 1920 163" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <path fill="var(--wave-color)"
-                    d="M 0 0 C 388.40000000000003 0 582.5999999999999 110 971 110 L 971 110 L 971 0 L 0 0 Z"
-                    stroke-width="0"></path>
-                <path fill="var(--wave-color)" d="M 970 110 C 1350 110 1540 0 1920 0 L 1920 0 L 1920 0 L 970 0 Z"
-                    stroke-width="0"></path>
-            </svg>
-            <div id="contacto"><br></div>
-
-            <div class="send__container1" id="top">
-                <div class="send__content1 bd-grid  centertxt">
-
-                    <!-- CLOCK STATUS -->
-                    <div class="tarjcont3">
-                        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-                    </div>
-                    <div class="tarjcont3">
-                        <span class="stat"><i class="fas fa-circle statuscircle" id="circulo"></i></span><span
-                            class="stat" id="status"></span>
-                    </div>
-
-                </div>
+          <div class="skill-card" data-animate data-delay="2" style="--card-accent:var(--purple)">
+            <div class="skill-card__bar" style="background:var(--purple)"></div>
+            <div class="skill-card__name">Backend</div>
+            <div class="skill-card__chips">
+              <span class="chip chip--purple">Node.js</span>
+              <span class="chip chip--purple">Express.js</span>
+              <span class="chip chip--purple">Django 5</span>
+              <span class="chip chip--purple">DRF</span>
+              <span class="chip chip--purple">Flask</span>
             </div>
+          </div>
 
-            <div class="send__container1" id="bottom">
-
-                <div class="send__content1 bd-grid">
-                    <h2 style="margin-bottom: 5px;" class="section-title-center send__title1">Contact Now</h2>
-                    <form action="submit" id="submit-form">
-                        <div >
-                            <label id="namelabel" for="name" class="form-label">Name</label><br>
-                            <input type="text" name="name" class="form-control" id="name"
-                                placeholder="your name"><br>
-                        </div>
-
-                        <div>
-                            <label id="moblabel" for="mobile" class="form-label">Mobile</label><br>
-                            <input type="number" name="mobile" class="form-control" id="mobile"
-                                placeholder="9388798989"><br>
-                        </div>
-                        <div>
-                            <label id="emaillabel" for="Email" class="form-label">Email address</label><br>
-                            <input  type="email" name="email" class="form-control" id="Email"
-                                placeholder="name@example.com"><br>
-                        </div>
-                        <div>
-                            <label id="msglabel" for="Message" class="form-label">Enter message</label><br>
-                            <textarea name="message" placeholder="your message here..."  style="width: 70%;" class="form-control" id="message" rows="3"></textarea><br>
-                        </div>
-                            <button onclick="validateform()" >Submit</button>
-                        </div>
-                    </form>
-                </div>
+          <div class="skill-card" data-animate data-delay="3" style="--card-accent:var(--green)">
+            <div class="skill-card__bar" style="background:var(--green)"></div>
+            <div class="skill-card__name">Frontend</div>
+            <div class="skill-card__chips">
+              <span class="chip chip--green">Next.js 15</span>
+              <span class="chip chip--green">Remix</span>
+              <span class="chip chip--green">React Router v7</span>
             </div>
+          </div>
 
-            <!--Waves Container-->
+          <div class="skill-card" data-animate data-delay="4" style="--card-accent:var(--accent)">
+            <div class="skill-card__bar" style="background:var(--accent)"></div>
+            <div class="skill-card__name">Databases &amp; Queues</div>
+            <div class="skill-card__chips">
+              <span class="chip chip--accent">PostgreSQL</span>
+              <span class="chip chip--accent">Redis</span>
+              <span class="chip chip--accent">Prisma ORM</span>
+              <span class="chip chip--accent">BullMQ</span>
+              <span class="chip chip--accent">Celery</span>
+              <span class="chip chip--accent">Pub/Sub</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-animate data-delay="1" style="--card-accent:var(--orange)">
+            <div class="skill-card__bar" style="background:var(--orange)"></div>
+            <div class="skill-card__name">Shopify</div>
+            <div class="skill-card__chips">
+              <span class="chip chip--orange">Admin API (GraphQL)</span>
+              <span class="chip chip--orange">App Bridge</span>
+              <span class="chip chip--orange">Polaris</span>
+              <span class="chip chip--orange">Admin Extensions</span>
+              <span class="chip chip--orange">OAuth</span>
+              <span class="chip chip--orange">Webhooks</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-animate data-delay="2" style="--card-accent:#a78bfa">
+            <div class="skill-card__bar" style="background:#a78bfa"></div>
+            <div class="skill-card__name">AI &amp; ML</div>
+            <div class="skill-card__chips">
+              <span class="chip chip--purple">OpenAI GPT-4</span>
+              <span class="chip chip--purple">FAISS</span>
+              <span class="chip chip--purple">RAG Pipeline</span>
+              <span class="chip chip--purple">Prompt Engineering</span>
+              <span class="chip chip--purple">Embeddings</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-animate data-delay="3" style="--card-accent:var(--green)">
+            <div class="skill-card__bar" style="background:var(--green)"></div>
+            <div class="skill-card__name">DevOps &amp; Tools</div>
+            <div class="skill-card__chips">
+              <span class="chip chip--green">Docker</span>
+              <span class="chip chip--green">Git</span>
+              <span class="chip chip--green">Bash</span>
+              <span class="chip chip--green">Pino Logging</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-animate data-delay="4" style="--card-accent:var(--orange)">
+            <div class="skill-card__bar" style="background:var(--orange)"></div>
+            <div class="skill-card__name">Integrations &amp; Cloud</div>
+            <div class="skill-card__chips">
+              <span class="chip chip--orange">AWS S3 / SES</span>
+              <span class="chip chip--orange">Klaviyo API</span>
+              <span class="chip chip--orange">Auth0</span>
+              <span class="chip chip--orange">Twilio</span>
+              <span class="chip chip--orange">SendGrid</span>
+              <span class="chip chip--orange">Rokt API</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════
+         EXPERIENCE
+    ════════════════════════════════════════════════ -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <span class="section__label" data-animate>// experience</span>
+        <h2 class="section__title" data-animate data-delay="1">Where I've Worked</h2>
+
+        <div class="experience__card" data-animate data-delay="2">
+          <div class="experience__header">
             <div>
-                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                    <defs>
-                        <path id="gentle-wave"
-                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                    </defs>
-                    <g class="parallax">
-                        <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--wave1-color)" opacity="0.5" />
-                        <use xlink:href="#gentle-wave" x="48" y="3" fill="var(--wave2-color)" opacity="0.6" />
-                        <use xlink:href="#gentle-wave" x="48" y="5" fill="var(--wave3-color)" opacity="0.7" />
-                        <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--wave4-color)" opacity="1" />
-                    </g>
-                </svg>
+              <div class="experience__company">Valar Digital</div>
+              <div class="experience__role">Backend &amp; Full Stack Developer</div>
             </div>
-        </section>
+            <span class="experience__period">Jan 2023 – Present</span>
+          </div>
 
+          <ul class="experience__bullets">
+            <li class="experience__bullet">
+              Build and maintain Shopify-integrated SaaS applications serving e-commerce merchants across multiple markets.
+            </li>
+            <li class="experience__bullet">
+              Led R180 end-to-end: engineered a RAG pipeline (FAISS + OpenAI GPT-4) with custom 8-type automated QA system, reducing manual psychological report writing by 80%.
+            </li>
+            <li class="experience__bullet">
+              Architected event-driven systems using Google Cloud Pub/Sub processing millions of analytics events daily for the Upseller e-commerce platform.
+            </li>
+            <li class="experience__bullet">
+              Built enterprise subscription billing engine with BullMQ job queues, intelligent multi-phase payment recovery, and Klaviyo marketing automation.
+            </li>
+            <li class="experience__bullet">
+              Implemented HMAC webhook verification, OAuth 2.0 flows, JWT authentication, and GDPR-compliant anonymization systems across multiple projects.
+            </li>
+          </ul>
 
-        <!-- ===== FOOTER ===== -->
-        <footer class="footer">
-
-            <!-- ===== FOOTER TITLE ===== -->
-            <div class="content flex">
-
-                <p class="footer__title">MOHAMMED VASEEM CHOLAKKAN</p>
-
-                <!-- ===== FOOTER SOCIAL LINKS ===== -->
-                <div class="footer__social">
-                    <a href="https://www.linkedin.com/in/mohammed-vaseem-cholakkan-a00a00248" target="_blank"
-                        class="footer__icon curserhover"><i class='fab fa-linkedin-in'></i></a>
-                    <a href="https://www.instagram.com/vaseem_cholakkan" target="_blank"
-                        class="footer__icon curserhover"><i class='fab fa-instagram' style="font-weight:600;"></i></a>
-                    <a href="https://github.com/vaseemcholakkan123" target="_blank" class="footer__icon curserhover"><i
-                            class='fab fa-github'></i></a>
-
-                </div>
-
-                <!-- ===== FOOTER COPYRIGHT ===== -->
-                <p class="footer__copy" id="copy"></p>
-            </div>
-        </footer>
-
-        <!-- ===== INTRO ANIMATION ===== -->
-
-
-        <!-- ===== GSAP JS LIBRARY ===== -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-            crossorigin="anonymous"></script>
-
-        <!-- ===== JQUERY LIBRARY ===== -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <!--===== ITYPED JS =====-->
-        <script src="https://unpkg.com/ityped@0.0.10"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-
-        <!--===== SLICK JS =====-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-       
+          <div class="experience__tags">
+            <span class="chip chip--accent">Django 5</span>
+            <span class="chip chip--purple">Remix</span>
+            <span class="chip chip--green">Next.js 15</span>
+            <span class="chip chip--orange">Shopify</span>
+            <span class="chip chip--accent">OpenAI</span>
+            <span class="chip chip--purple">TypeScript</span>
+            <span class="chip chip--accent">PostgreSQL</span>
+            <span class="chip chip--purple">Redis</span>
+          </div>
         </div>
 
-        <script>
-           function validateform() {
-                let nameinput = document.getElementById('name').value
-                let mobinput = document.getElementById('mobile').value
-                let emailinput = document.getElementById('Email').value
-                let msginput = document.getElementById('message').value
+        <!-- Brototype entry -->
+        <div class="experience__card experience__card--secondary" data-animate data-delay="3">
+          <div class="experience__header">
+            <div>
+              <div class="experience__company" style="font-size:1.1rem">Brototype Academy</div>
+              <div class="experience__role">Full Stack Web Development Bootcamp</div>
+            </div>
+            <span class="experience__period">Dec 2022 – Jan 2023</span>
+          </div>
+          <ul class="experience__bullets">
+            <li class="experience__bullet">Intensive full-stack training covering Node.js, Express, MongoDB, HTML/CSS, and JavaScript fundamentals.</li>
+            <li class="experience__bullet">Built and deployed multiple projects; applied learnings immediately to join Valar Digital as a professional developer.</li>
+          </ul>
+          <div class="experience__tags">
+            <span class="chip chip--muted">Node.js</span>
+            <span class="chip chip--muted">Express</span>
+            <span class="chip chip--muted">MongoDB</span>
+            <span class="chip chip--muted">JavaScript</span>
+            <span class="chip chip--muted">HTML/CSS</span>
+          </div>
+        </div>
 
-                let namelabel = document.getElementById('namelabel')
-                let moblabel = document.getElementById('moblabel')
-                let emaillabel = document.getElementById('emaillabel')
-                let msglabel = document.getElementById('msglabel')
-                let validated = false
+      </div>
+    </section>
 
-                if (nameinput == "") {
-                    namelabel.innerText = '  ⓘ pls enter here'
-                    validated = false
-                }
-                else if (mobinput == "") {
-                    moblabel.innerText = '  ⓘ pls enter here'
-                    validated = false
-                }
+    <div class="divider"></div>
 
-                else if (mobinput.length < 10 || mobinput.length > 10) {
-                    console.log(mobinput.length);
-                    moblabel.innerText = 'Enter a valid mobile number'
-                    validated = false
-                
-                }
+    <!-- ═══════════════════════════════════════════════
+         PROJECTS
+    ════════════════════════════════════════════════ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <span class="section__label" data-animate>// featured work</span>
+        <h2 class="section__title" data-animate data-delay="1">Things I've Built</h2>
+        <p class="section__sub" data-animate data-delay="2">Private commercial work — all systems are production-deployed for merchant clients.</p>
 
-                else if (emailinput == "") {
-                    if(mobinput.length == 10) moblabel.innerText = 'valid'
-                    emaillabel.innerText = '  ⓘ pls enter here'
-                    validated = false
-                }
-                else if (msginput == "") {
-                    msglabel.innerText = '  ⓘ pls enter here'
-                    validated = false
-                } else validated = true
+        <div class="projects__grid">
 
-                
-                
-                $("#submit-form").submit((e) => {
-                    
-                    e.preventDefault()
-                    if(validated){
-                    $.ajax({
-                        url: "https://script.google.com/macros/s/AKfycby1Lt-dVRAprzIN41jXIlKRjkgCDNNllOxUW5rw-nphUHFtkh3kDLns5wnJ4LXFWQz3Tw/exec",
-                        data: $("#submit-form").serialize(),
-                        method: "post",
-                        success: function (response) {
-                            alert("Form submitted successfully")
-                            window.location.reload()
-                            //window.location.href="https://google.com"
-                        },
-                        error: function (err) {
-                            alert("Something Error")
-    
-                        }
-                    })
-                }
-                })
-                
+          <!-- R180 -->
+          <div class="project-card" data-animate data-delay="1">
+            <div class="project-card__top-bar" style="background:var(--accent)"></div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="chip chip--accent project-card__role">Technical Lead</span>
+                <span class="project-card__link">↗</span>
+              </div>
+              <h3 class="project-card__title">R180 — AI Workshop Management Platform</h3>
+              <div class="project-card__impact" style="color:var(--accent)">
+                <span class="project-card__impact-dot" style="background:var(--accent)"></span>
+                80% reduction in manual psychological report writing
+              </div>
+              <p class="project-card__desc">
+                Enterprise Django 5.0.6 ecosystem for workshop feedback management and AI-generated
+                psychological assessment reports. Built full RAG pipeline with FAISS vector search +
+                GPT-4. Custom 8-type automated QA system validates all LLM output for formatting and
+                content compliance before delivery. Celery-based async processing with multi-stage
+                post-processing pipeline.
+              </p>
+              <div class="project-card__divider"></div>
+              <div class="project-card__tags">
+                <span class="chip chip--accent">Django 5</span>
+                <span class="chip chip--purple">Celery</span>
+                <span class="chip chip--green">OpenAI GPT-4</span>
+                <span class="chip chip--accent">FAISS</span>
+                <span class="chip chip--purple">Redis</span>
+                <span class="chip chip--accent">PostgreSQL</span>
+                <span class="chip chip--muted">ReportLab</span>
+              </div>
+            </div>
+          </div>
 
-            }
-        </script>
+          <!-- Upseller -->
+          <div class="project-card" data-animate data-delay="2">
+            <div class="project-card__top-bar" style="background:var(--purple)"></div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="chip chip--purple project-card__role">Full Stack Developer</span>
+                <span class="project-card__link">↗</span>
+              </div>
+              <h3 class="project-card__title">Upseller — Multi-Funnel E-commerce Platform</h3>
+              <div class="project-card__impact" style="color:var(--purple)">
+                <span class="project-card__impact-dot" style="background:var(--purple)"></span>
+                Millions of analytics events processed daily
+              </div>
+              <p class="project-card__desc">
+                Large-scale Shopify app with multiple conversion optimization funnels: checkout upsells,
+                cart control widgets, feedback widgets, and shipping protection. Event-driven architecture
+                via Google Cloud Pub/Sub. Redis caching layer reducing API response times. A/B testing
+                framework, reward programs, and Shopify Cart Transform Functions for dynamic cart
+                modification.
+              </p>
+              <div class="project-card__divider"></div>
+              <div class="project-card__tags">
+                <span class="chip chip--purple">Remix</span>
+                <span class="chip chip--accent">TypeScript</span>
+                <span class="chip chip--orange">Shopify</span>
+                <span class="chip chip--green">Pub/Sub</span>
+                <span class="chip chip--purple">Redis</span>
+                <span class="chip chip--accent">Prisma</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PF Subscriptions -->
+          <div class="project-card" data-animate data-delay="1">
+            <div class="project-card__top-bar" style="background:var(--green)"></div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="chip chip--green project-card__role">Backend Developer</span>
+                <span class="project-card__link">↗</span>
+              </div>
+              <h3 class="project-card__title">PF Subscriptions — Enterprise Billing Engine</h3>
+              <div class="project-card__impact" style="color:var(--green)">
+                <span class="project-card__impact-dot" style="background:var(--green)"></span>
+                Automated billing + intelligent payment recovery
+              </div>
+              <p class="project-card__desc">
+                Enterprise-grade subscription billing platform with automated recurring charges across
+                multiple Shopify shops. BullMQ job queues with intelligent multi-phase payment retry
+                logic reducing churn from failed payments. Klaviyo marketing automation with caching
+                layer. Shopify webhook handling with proper HMAC verification for billing events.
+              </p>
+              <div class="project-card__divider"></div>
+              <div class="project-card__tags">
+                <span class="chip chip--green">Next.js 15</span>
+                <span class="chip chip--accent">BullMQ</span>
+                <span class="chip chip--purple">Klaviyo</span>
+                <span class="chip chip--purple">PostgreSQL</span>
+                <span class="chip chip--accent">TypeScript</span>
+                <span class="chip chip--orange">Shopify</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Sync -->
+          <div class="project-card" data-animate data-delay="2">
+            <div class="project-card__top-bar" style="background:var(--orange)"></div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="chip chip--orange project-card__role">Backend Developer</span>
+                <span class="project-card__link">↗</span>
+              </div>
+              <h3 class="project-card__title">Customer Sync — Marketing Data Pipeline</h3>
+              <div class="project-card__impact" style="color:var(--orange)">
+                <span class="project-card__impact-dot" style="background:var(--orange)"></span>
+                Real-time marketing automation enabled
+              </div>
+              <p class="project-card__desc">
+                Python-based worker service synchronizing customer data between e-commerce platforms
+                and Klaviyo / Rokt marketing tools. Redis-backed job queue for reliable async processing
+                with retry logic. Data hashing utilities for change detection preventing duplicate syncs.
+                Modular architecture with separate client modules per third-party API.
+              </p>
+              <div class="project-card__divider"></div>
+              <div class="project-card__tags">
+                <span class="chip chip--accent">Python</span>
+                <span class="chip chip--purple">Redis</span>
+                <span class="chip chip--orange">Klaviyo API</span>
+                <span class="chip chip--green">Rokt API</span>
+                <span class="chip chip--accent">Queue System</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════
+         ARCHIVE
+    ════════════════════════════════════════════════ -->
+    <section class="section section--alt" id="archive">
+      <div class="container">
+        <span class="section__label" data-animate>// all projects</span>
+        <h2 class="section__title" data-animate data-delay="1">Project Archive</h2>
+        <p class="section__sub" data-animate data-delay="2">Every production system I've built.</p>
+
+        <div class="archive__table-wrap" data-animate data-delay="3">
+          <table class="archive__table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>Project</th>
+                <th class="col-company">Built At</th>
+                <th class="col-stack">Stack</th>
+                <th>Links</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-year">2024</td>
+                <td class="col-name">R180 Workshop Platform + AI Report Generator</td>
+                <td class="col-company">Valar Digital</td>
+                <td class="col-stack">
+                  <span class="chip chip--accent">Django 5</span>
+                  <span class="chip chip--green">GPT-4</span>
+                  <span class="chip chip--accent">FAISS</span>
+                  <span class="chip chip--purple">Celery</span>
+                </td>
+                <td class="col-link"><span style="color:var(--dim)">Private</span></td>
+              </tr>
+              <tr>
+                <td class="col-year">2024</td>
+                <td class="col-name">Upseller — Multi-Funnel E-commerce Platform</td>
+                <td class="col-company">Valar Digital</td>
+                <td class="col-stack">
+                  <span class="chip chip--purple">Remix</span>
+                  <span class="chip chip--orange">Shopify</span>
+                  <span class="chip chip--green">Pub/Sub</span>
+                </td>
+                <td class="col-link"><span style="color:var(--dim)">Private</span></td>
+              </tr>
+              <tr>
+                <td class="col-year">2024</td>
+                <td class="col-name">PF Subscriptions — Billing Engine</td>
+                <td class="col-company">Valar Digital</td>
+                <td class="col-stack">
+                  <span class="chip chip--green">Next.js 15</span>
+                  <span class="chip chip--accent">BullMQ</span>
+                  <span class="chip chip--purple">Klaviyo</span>
+                </td>
+                <td class="col-link"><span style="color:var(--dim)">Private</span></td>
+              </tr>
+              <tr>
+                <td class="col-year">2024</td>
+                <td class="col-name">Customer Sync — Marketing Data Pipeline</td>
+                <td class="col-company">Valar Digital</td>
+                <td class="col-stack">
+                  <span class="chip chip--accent">Python</span>
+                  <span class="chip chip--purple">Redis</span>
+                  <span class="chip chip--orange">Klaviyo</span>
+                </td>
+                <td class="col-link"><span style="color:var(--dim)">Private</span></td>
+              </tr>
+              <tr>
+                <td class="col-year">2023</td>
+                <td class="col-name">PF Influencers — Campaign Management App</td>
+                <td class="col-company">Valar Digital</td>
+                <td class="col-stack">
+                  <span class="chip chip--purple">React Router v7</span>
+                  <span class="chip chip--orange">Shopify</span>
+                  <span class="chip chip--accent">GraphQL</span>
+                </td>
+                <td class="col-link"><span style="color:var(--dim)">Private</span></td>
+              </tr>
+              <tr>
+                <td class="col-year">2023</td>
+                <td class="col-name">Product Title Cleaner + Unleashed Integration</td>
+                <td class="col-company">Valar Digital</td>
+                <td class="col-stack">
+                  <span class="chip chip--green">Express.js</span>
+                  <span class="chip chip--accent">TypeScript</span>
+                  <span class="chip chip--orange">Shopify</span>
+                </td>
+                <td class="col-link"><span style="color:var(--dim)">Private</span></td>
+              </tr>
+              <tr>
+                <td class="col-year">2023</td>
+                <td class="col-name">Shopify Admin Extension — Test Block App</td>
+                <td class="col-company">Valar Digital</td>
+                <td class="col-stack">
+                  <span class="chip chip--orange">Admin Extensions</span>
+                  <span class="chip chip--orange">App Bridge</span>
+                </td>
+                <td class="col-link"><span style="color:var(--dim)">Private</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ═══════════════════════════════════════════════
+         CONTACT
+    ════════════════════════════════════════════════ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <span class="section__label" data-animate>// contact</span>
+        <h2 class="section__title" data-animate data-delay="1">Let's Work Together</h2>
+        <p class="section__sub" data-animate data-delay="2">
+          Open to senior backend &amp; full stack roles. Feel free to reach out.
+        </p>
+
+        <div class="contact__grid">
+
+          <!-- Left: clock + social -->
+          <div class="contact__info" data-animate data-delay="2">
+
+            <div class="contact__clock-card">
+              <div class="contact__clock" id="clock-display">--:--:-- --</div>
+              <div class="contact__status">
+                <span class="contact__status-dot" id="status-dot"></span>
+                <span id="status-text">Loading...</span>
+              </div>
+              <p class="contact__timezone">Based in India &middot; IST (UTC+5:30)</p>
+            </div>
+
+            <div class="contact__social">
+              <a href="https://github.com/vaseemcholakkan123" target="_blank" class="contact__social-link">
+                <i class="fab fa-github"></i> github.com/vaseemcholakkan123
+              </a>
+              <a href="https://www.linkedin.com/in/mohammed-vaseem-cholakkan-a00a00248" target="_blank" class="contact__social-link">
+                <i class="fab fa-linkedin-in"></i> linkedin.com/in/mohammed-vaseem
+              </a>
+              <a href="https://www.instagram.com/vaseem_cholakkan" target="_blank" class="contact__social-link">
+                <i class="fab fa-instagram"></i> instagram.com/vaseem_cholakkan
+              </a>
+              <a href="mailto:[your@email.com]" class="contact__social-link">
+                <i class="fas fa-envelope"></i> [your@email.com]
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right: form -->
+          <div class="contact__form-card" data-animate data-delay="3">
+            <h3 class="contact__form-title">Send a Message</h3>
+
+            <!-- Success state (hidden by default) -->
+            <div class="form-success" id="form-success" style="display:none">
+              <div class="form-success__icon">✓</div>
+              <p class="form-success__msg">Message sent! I'll get back to you soon.</p>
+            </div>
+
+            <form id="contact-form" action="submit" novalidate>
+              <div class="form-group">
+                <label class="form-label" id="lbl-name" for="inp-name">Name</label>
+                <input type="text" id="inp-name" name="name" class="form-control"
+                  placeholder="Your name" autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" id="lbl-email" for="inp-email">Email</label>
+                <input type="email" id="inp-email" name="email" class="form-control"
+                  placeholder="your@email.com" autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" id="lbl-message" for="inp-message">Message</label>
+                <textarea id="inp-message" name="message" class="form-control"
+                  placeholder="Tell me what you're building..."></textarea>
+              </div>
+              <button type="button" class="contact__submit" id="submit-btn" onclick="submitForm()">
+                Send Message &rarr;
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__name">MOHAMMED VASEEM CHOLAKKAN</span>
+        <div class="footer__social">
+          <a href="https://github.com/vaseemcholakkan123" target="_blank" class="footer__social-link" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mohammed-vaseem-cholakkan-a00a00248" target="_blank" class="footer__social-link" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/vaseem_cholakkan" target="_blank" class="footer__social-link" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <p class="footer__copy" id="footer-copy"></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="fas fa-angle-up"></i>
+  </button>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Contact form submit -->
+  <script>
+    function submitForm() {
+      const nameEl = document.getElementById('inp-name');
+      const emailEl = document.getElementById('inp-email');
+      const msgEl = document.getElementById('inp-message');
+      const lblName = document.getElementById('lbl-name');
+      const lblEmail = document.getElementById('lbl-email');
+      const lblMsg = document.getElementById('lbl-message');
+
+      // Reset state
+      [[nameEl, lblName, 'Name'], [emailEl, lblEmail, 'Email'], [msgEl, lblMsg, 'Message']]
+        .forEach(([inp, lbl, orig]) => {
+          inp.classList.remove('error-field');
+          lbl.className = 'form-label';
+          lbl.textContent = orig;
+        });
+
+      let valid = true;
+      if (!nameEl.value.trim()) {
+        lblName.className = 'form-label error';
+        lblName.textContent = 'Name — required';
+        nameEl.classList.add('error-field'); valid = false;
+      }
+      if (!emailEl.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+        lblEmail.className = 'form-label error';
+        lblEmail.textContent = 'Email — enter a valid address';
+        emailEl.classList.add('error-field'); valid = false;
+      }
+      if (!msgEl.value.trim()) {
+        lblMsg.className = 'form-label error';
+        lblMsg.textContent = 'Message — required';
+        msgEl.classList.add('error-field'); valid = false;
+      }
+      if (!valid) return;
+
+      const btn = document.getElementById('submit-btn');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const form = document.getElementById('contact-form');
+      const data = new URLSearchParams(new FormData(form)).toString();
+
+      fetch('https://script.google.com/macros/s/AKfycby1Lt-dVRAprzIN41jXIlKRjkgCDNNllOxUW5rw-nphUHFtkh3kDLns5wnJ4LXFWQz3Tw/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: data
+      })
+      .then(() => {
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'flex';
+      })
+      .catch(() => {
+        btn.textContent = 'Send Message →';
+        btn.disabled = false;
+        lblMsg.className = 'form-label error';
+        lblMsg.textContent = 'Message — something went wrong, please try again';
+      });
+    }
+  </script>
+
 </body>
-
 </html>
