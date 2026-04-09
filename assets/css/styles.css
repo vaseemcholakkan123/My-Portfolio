@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ── GOOGLE FONTS ─────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap');
 
 /* ── CSS VARIABLES ────────────────────────────────────────── */
 :root {
@@ -26,7 +26,7 @@
   --nav-bg:     rgba(7, 8, 14, 0.92);
 
   /* Typography */
-  --font-head: 'Syne', sans-serif;
+  --font-head: 'Epilogue', sans-serif;
   --font-body: 'DM Sans', sans-serif;
   --font-mono: 'Source Code Pro', monospace;
 
@@ -112,6 +112,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; }
 .section__title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
+  letter-spacing: -0.015em;
   color: var(--text);
   margin-bottom: 16px;
 }
@@ -304,8 +305,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.15; }
 /* Name */
 .hero__name {
   font-size: clamp(3rem, 6vw, 5.2rem);
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.05;
+  letter-spacing: -0.02em;
   color: var(--text);
   margin-bottom: 6px;
 }
